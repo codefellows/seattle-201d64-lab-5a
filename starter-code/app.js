@@ -63,7 +63,7 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply(4,7,5);
+// testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -81,12 +81,24 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+  let sumOfArray = 0;
+  let val = "";
+  for(let i in sumArr){
+    if(i < sumArr.length-1){
+      val += sumArr[i] + ",";
+    }else{
+      val += sumArr[i];
+    }
+    sumOfArray += sumArr[i];
+  }
+  let words = val + " was passed in as an array of numbers, and " + sumOfArray + " is their sum.";
+  let result = [sumOfArray, words]
+  return result;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
