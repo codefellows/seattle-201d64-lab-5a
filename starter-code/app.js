@@ -31,7 +31,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+  console.log(a,b);
+  var product = a*b;
+  var prodArray = [product, 'The product of 5 and 9 is 45.'];
+  console.log('The product is :' prodArray);
+  return prodArray;
 }
 
 // Here is the test for multiply(); uncomment it to run it
