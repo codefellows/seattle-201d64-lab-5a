@@ -168,7 +168,7 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
   let words = "The numbers " + val + " have a product of " + prodOfArray + ".";
   let result = [prodOfArray, words]
   return result; 
-}
+} 
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
