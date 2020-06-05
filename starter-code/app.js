@@ -12,7 +12,6 @@ function sum(a, b) { //eslint-disable-line
   let answer = a+b;
   let words = "The sum of " + a + " and " + b + " is " + answer +".";
   let result = [answer, words];
-  console.log(result);
   return result;
 }
 
