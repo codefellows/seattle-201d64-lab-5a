@@ -15,11 +15,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // console.log('hi');
 
-function sum(firstNumber, secondNumber) { //eslint-disable-line
-  var number3 = firstNumber + secondNumber;
-  console.log('The sum of ' + 4 + ' and ' + 7 + ' is ' + 11 + '.');
-  return[number3, 'The sum of ' + firstNumber + ' and ' + secondNumber + ' is ' + number3 + '.'];
-}
+// function sum(firstNumber, secondNumber) { //eslint-disable-line
+//   var number3 = firstNumber + secondNumber;
+//   console.log('The sum of ' + 4 + ' and ' + 7 + ' is ' + 11 + '.');
+//   return[number3, 'The sum of ' + firstNumber + ' and ' + secondNumber + ' is ' + number3 + '.'];
+// }
 
 // Here is the test for sum(); uncomment it to run it
 
