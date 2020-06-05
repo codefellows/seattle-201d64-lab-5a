@@ -167,10 +167,10 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
   }
   let words = "The numbers " + val + " have a product of " + prodOfArray + ".";
   let result = [prodOfArray, words]
-  return result;
+  return result; 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-testMultiplyAnyArray(testDynamicArray);
+// testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
