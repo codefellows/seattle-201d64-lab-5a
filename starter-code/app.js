@@ -56,11 +56,44 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  var sumOfAB = a + b;
+  // console.log('test sumOfAB:', sumOfAB);
+  var stringSum = ('The sum of '+ a +' and '+ b +' is '+ sumOfAB +'.');
+  // console.log('test string:', stringSum);
+  return [sumOfAB, stringSum];
+}
 
+function multiply(a, b) { //eslint-disable-line
+  var multAnswer = (a*b);
+  // console.log('multAnswer =', multAnswer);
+  var stringMult = ('The product of '+ a +' and '+ b +' is '+ multAnswer+'.');
+  // console.log('stringMult =', stringMult);
+  return [multAnswer, stringMult]
+}
+// Write your code here
+function sumAndMultiply(a, b, c) { //eslint-disable-line
+
+  var sumAB = sum(a,b)[0];
+  // console.log('sumAB =', sumAB);
+  var sumOfAll = sum(sumAB,c)[0];
+  // console.log('sumOfAll =', sumOfAll);
+
+  var proAB = multiply(a,b)[0];
+  // console.log('proAB =', proAB);
+  var productOfAll = multiply(proAB,c)[0];
+  // console.log('productOfAll =', productOfAll);
+
+
+  var stringSumAll = (a +' and '+ b +' and '+ c +' sum to '+ sumOfAll +'.')
+  // console.log('stringSumAll =', stringSumAll);
+  var stringProductAll = ('The product of ' + a +' and '+ b +' and '+ c +' is '+ productOfAll +'.')
+  // console.log('stringProductAll =', stringProductAll);
+
+  return [sumOfAll, productOfAll, stringSumAll, stringProductAll]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
