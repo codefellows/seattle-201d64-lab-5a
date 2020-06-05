@@ -4,7 +4,7 @@
 ====Write a function called sum()=== that...
 ===that takes in two numbers as arguments=== and then
 ===returns an array where...
-the first element is:    the sum of those numbers, 
+the first element is:    the sum of those numbers,
 the second element is:   a concatenated string that EXACTLY follows this example and uses the values that were input into the function:
 
 "The sum of 4 and 7 is 11."
@@ -13,15 +13,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 
-// console.log('hi');
+// var firstNumber = 4;
+// var secondNumber = 7;
 
-// function sum(firstNumber, secondNumber) { //eslint-disable-line
-//   var number3 = firstNumber + secondNumber;
-//   console.log('The sum of ' + 4 + ' and ' + 7 + ' is ' + 11 + '.');
-//   return[number3, 'The sum of ' + firstNumber + ' and ' + secondNumber + ' is ' + number3 + '.'];
-// }
+function sum(number1, number2) { //eslint-disable-line
+  var addedNumber3 = number1 + number2;
+  var sentenceString = ('The sum of ' + number1 + ' and ' + number2 + ' is ' + addedNumber3 + '.');
+  var final = [addedNumber3, sentenceString];
+  console.log(final);
+  return final; //
+}
 
 // Here is the test for sum(); uncomment it to run it
+
 
 testSum(4, 7);
 
@@ -107,7 +111,7 @@ function multiplyArray(multArr) { //eslint-disable-line
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
+// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
 
