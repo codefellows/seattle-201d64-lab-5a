@@ -134,9 +134,22 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
 
-  var x = [24, 'The numbers 2,3,4 have a product of 24.'];
+var e;
+
+  function multiply1(a, b, c) { //eslint-disable-line
+
+    var x = a*b*c;
+  
+    return x;
+  
+  }
+
+  e = multiply1(multArr[0], multArr[1], multArr[2]);
+
+  var x = [e , 'The numbers 2,3,4 have a product of 24.'];
 
   return x;
+
 
 }
 
