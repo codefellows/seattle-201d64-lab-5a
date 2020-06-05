@@ -14,7 +14,7 @@ function sum(num1, num2) { //eslint-disable-line
   var addedNumber= num1 + num2;
   var concatenatedString= 'The sum of ' + num1 + ' and ' + num2 + ' is ' + addedNumber + '.';
   var myOutput = [addedNumber, concatenatedString];
-  
+
   console.log('myOutput', myOutput);
   console.log('The sum of 4 and 7 is 11.');
   return myOutput;
