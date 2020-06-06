@@ -8,8 +8,17 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-function sum(a, b) { //eslint-disable-line
+function sum(numOne, numTwo) { //eslint-disable-line ==returns [sum, string]
+  var integerOne = numOne;
+  // console.log(integerOne);
+  var integerTwo = numTwo;
+  // console.log(integerTwo);
+  var sumNumber = numOne + numTwo;
+  // console.log(sumNumber);
 
+  var numString = "The sum of " + integerOne + " and " + integerTwo + " is " + sumNumber + ".";
+  // console.log(numString);
+  return [sumNumber, numString];
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -26,11 +35,20 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) { //eslint-disable-line
+function multiply(numOne, numTwo) { //eslint-disable-line
+  var integerOne = numOne;
+  // console.log(integerOne);
+  var integerTwo = numTwo;
+  // console.log(integerTwo);
+  var sumNumber = numOne * numTwo;
+  // console.log(sumNumber);
 
+  var numString = "The product of " + integerOne + " and " + integerTwo + " is " + sumNumber + ".";
+  // console.log(numString);
+  return [sumNumber, numString];
 }
 
-// Here is the test for multiply(); uncomment it to run it
+// Here is the test for multiply(); uncomment it to run it/
 // testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
@@ -47,8 +65,28 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
+function sumAndMultiply(numOne, numTwo, numThree) { //eslint-disable-line
+  var sumOne = sum(numOne,numTwo);
+  var newSum = sumOne[0];
+  // console.log(newSum);
+  var sumTotal = sum(newSum, numThree);
+  var newTotal = sumTotal[0];
+  console.log(newTotal);
 
+  var multiplyOne = multiply(numOne,numTwo);
+  var multiplyTotal = multiplyOne[0];
+  // console.log(multiplyOne);
+  var newMultiplyTotal = multiply(multiplyTotal, numThree);
+  var multiplyTotalSum = newMultiplyTotal[0];
+  console.log(multiplyTotalSum);
+
+  var numString = numOne + " and " + numTwo + " and " + numThree + " sum to " + newTotal + ".";
+  // console.log(numString);
+
+  var numStringTwo = "The product of " + numOne + " and " + numTwo + " and " + numThree + " is " + multiplyTotalSum + ".";
+  // console.log(numStringTwo);
+  // console.log(newTotal, multiplyTotalSum, numString, numStringTwo);
+  return [newTotal, multiplyTotalSum, numString, numStringTwo];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -70,12 +108,25 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+  //takes in array and adds sum of numbers
+  // //string
+  var numOne = sumArr[0];
+  var numTwo = sumArr[1];
+  var numThree = sumArr[2];
+  
+  var sumOfOne = sum(numOne, numTwo);
+  var sumOfTwo = sum(sumOfOne[0], numThree);
+  var sumTotal = sumOfTwo[0];
+  console.log(sumTotal);
 
+  var sumString = numOne+","+numTwo+","+numThree+" was passed in as an array of numbers, and "+sumTotal+" is their sum.";
+  // console.log(sumString);
+  return[sumTotal, sumString]; //returns sum of numbers and string from above.
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
