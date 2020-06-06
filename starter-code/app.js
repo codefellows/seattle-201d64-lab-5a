@@ -16,13 +16,13 @@ function sum(num1, num2) { //eslint-disable-line
   var getSum = num1+num2;
   var stringWords = 'The sum of ' + num1 + ' and ' + num2 + ' is ' + getSum + '.';
   var sumArray = [getSum, stringWords];
-  console.log(sumArray);
+  // console.log(sumArray);
   return sumArray;
 }
 
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -38,13 +38,13 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(num3, num4) { //eslint-disable-line
   var getProduct = num3 * num4;
   var stringWords = 'The product of ' + num3 + ' and ' + num4 + ' is ' + getProduct + '.';
-  console.log(stringWords);
+  // console.log(stringWords);
   var multiplyArray = [getProduct, stringWords];
   return multiplyArray;
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -82,6 +82,15 @@ testSumAndMultiply(4,7,5);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
+
+
+
+
+
+
+
+
+
 /* Problem 4
 Write a function called sumArray() that takes in an array of numbers as its single argument and then returns an array where the first element is the sum of the numbers in the array, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 
@@ -96,15 +105,39 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
 
+  var sumFirstTwoNumbersInArray = sum(sumArr[0], sumArr[1])[0];
+  // console.log(sumFirstTwoNumbersInArray);
+  var sumAllNumbersInArray = sum(sumFirstTwoNumbersInArray, sumArr[2])[0];
+  // console.log(sumAllNumbersInArray);
+  //now i know that sumAllNumbersInArray equals 9
+  var secondElementString = sumArr[0] + ',' + sumArr[1] + ',' + sumArr[2] + ' was passed in as an array of numbers, and ' + sumAllNumbersInArray + ' is their sum.';
+  // console.log(sumAllNumbersInArray , secondElementString);
+  //the console log above allowed me to see my mistake, i was missing a space.
+  var finalArray = [sumAllNumbersInArray,secondElementString];
+  return finalArray;
 }
+
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Problem 5
 Write a function called multiplyArray() that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 
