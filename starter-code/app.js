@@ -100,11 +100,11 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) { //eslint-disable-line
   var arrSum = 0;
   var arrString = '';
-  for (var i =0; i < sumArr.length; i++){
+  for (var i = 0; i < sumArr.length; i++){
     arrString = arrString + sumArr[i] + ',';
      arrSum = sum(sumArr[i], arrSum)[0];
    }
-   var fourthString =  arrString.slice(0, -1) + ' was passed in as an array of numbers, and ' + arrSum + ' is their sum.';
+   var fourthString = arrString.slice(0, -1) + ' was passed in as an array of numbers, and ' + arrSum + ' is their sum.';
    var finalFour = [arrSum, fourthString];
 
    console.log(finalFour);
@@ -128,12 +128,22 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
 
+function multiplyArray(multArr) { //eslint-disable-line
+  var arrMulti = 1;
+  var arrMultiString = '';
+for (var i = 0; i < multArr.length; i++){
+  arrMultiString = arrMultiString + multArr[i] + ',';
+  arrMulti = multiply(multArr[i], arrMulti)[0];
+}
+var fifthString = 'The numbers ' + arrMultiString.slice(0,-1) + ' have a product of ' + arrMulti + '.';
+var finalFive = [arrMulti, fifthString];
+console.log(finalFive);
+return finalFive;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
