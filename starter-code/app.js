@@ -59,11 +59,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  var firstSum = sum(a,b)[0];
-  var totalSum = sum(firstSum,c)[0];
+  var firstSum = sum(a, b)[0];
+  var totalSum = sum(firstSum, c)[0];
 
-  var firstProduct = multiply(a,b)[0];
-  var totalProduct = multiply(firstProduct,c)[0];
+  var firstProduct = multiply(a, b)[0];
+  var totalProduct = multiply(firstProduct, c)[0];
   var concatenatedString = (a + ' and ' + b + ' and ' + c + ' sum to ' + totalSum + '.');
   var concatenatedString2 = ('The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + totalProduct + '.');
   var myOutput = [totalSum, totalProduct, concatenatedString, concatenatedString2];
@@ -89,13 +89,16 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 var testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { //eslint-disable-line
+function sumArray(numbersArray) { //eslint-disable-line
+  var arraySum = sum(numbersArray[0], numbersArray[1])[0];
+  var arraySumTotal = sum(arraySum, numbersArray[2])[0];
 
+  var arrayString = numbersArray[0] + ',' + numbersArray[1] + ',' + numbersArray[2] + ' was passed in as an array of numbers, and ' + arraySumTotal + ' is their sum.';
+  return [arraySumTotal, arrayString];
 }
-
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -146,3 +149,4 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 // testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
+
