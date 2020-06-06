@@ -113,10 +113,11 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(numbersArray) { //eslint-disable-line
-  var arraySummed = numbersArray[0] + numbersArray[1] + numbersArray[2];
+  // var firstSummed = ;
+  var arraySummed = sum(sum(numbersArray[0],numbersArray[1])[0], numbersArray[2])[0];
   console.log('this is from arraySummed: ' + arraySummed);
   var arraySentence = numbersArray[0] + ',' + numbersArray[1] + ',' + numbersArray[2] + ' was passed in as an array of numbers, and ' + arraySummed + ' is their sum.';
-  console.log(arraySentence);
+  // console.log(arraySentence);
   return [arraySummed, arraySentence];
 }
 
