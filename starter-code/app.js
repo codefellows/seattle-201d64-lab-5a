@@ -97,9 +97,9 @@ testSumAndMultiply(4,7,5);
 /////////////////////////////////////
 /* Problem 4
 
-TODO:   Write a function called sumArray() that...
-TODO:   takes in an array of numbers as its single argument and then returns...
-TODO:   an array where...
+Write a function called sumArray() that...
+takes in an array of numbers as its single argument and then returns...
+   an array where...
         TODO:the first element is the sum of the numbers in the array
         TODO: the second element is a string that EXACTLY follows this example and uses the values that were input
               into the function:
@@ -112,10 +112,9 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 var testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(numbersArray) { //eslint-disable-line
-  // var firstSummed = ;
+function sumArray(numbersArray) { //eslint-disable-line;
   var arraySummed = sum(sum(numbersArray[0],numbersArray[1])[0], numbersArray[2])[0];
-  console.log('this is from arraySummed: ' + arraySummed);
+  // console.log('this is from arraySummed: ' + arraySummed);
   var arraySentence = numbersArray[0] + ',' + numbersArray[1] + ',' + numbersArray[2] + ' was passed in as an array of numbers, and ' + arraySummed + ' is their sum.';
   // console.log(arraySentence);
   return [arraySummed, arraySentence];
@@ -131,9 +130,13 @@ testSumArray(testArray);
 
 /////////////////////////////////////
 /* Problem 5
-Write a function called multiplyArray() that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
-
-"The numbers 2,3,4 have a product of 24."
+     Write a function called multiplyArray() that...
+TODO:   takes an array of numbers as its argument and...
+TODO:   returns an array whose...
+     TODO: first element is the product of those numbers, and...
+     TODO: the second element is a string that EXACTLY follows this example and uses the values that were input into
+           the function:
+                "The numbers 2,3,4 have a product of 24."
 
 IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. This function should handle an array containing three elements. However, you may continue to use the + operator for string concatenation.
 
@@ -141,11 +144,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+  var arrayMultiplied = multiply(multiply(multArr[0],multArr[1])[0], multArr[2])[0];
+  // console.log('here is arrayMultiplied ' + arrayMultiplied);
+  var multiplyArraySentence = 'The numbers ' + multArr[0] + ',' + multArr[1] + ',' + multArr[2] + ' have a product of ' + arrayMultiplied + '.';
+  // console.log('here is multiplyArraySentence ' + multiplyArraySentence);
+  return [arrayMultiplied, multiplyArraySentence];
 }
 
+var arrayToMultiply = [2,3,4];
+
+multiplyArray(arrayToMultiply);
+
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
