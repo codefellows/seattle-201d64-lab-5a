@@ -83,9 +83,9 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-var testArray = [2, 3, 4]; //eslint-disable-line
+var testArray = [2,3,4]; //eslint-disable-line
 
-function sumArray(testArray) { //eslint-disable-line
+function sumArray() { //eslint-disable-line
 
   var sumArrayGroup1 = sum(testArray[0],testArray[1]);
   var sumArrayGroup2 = sum(sumArrayGroup1[0],testArray[2]);
