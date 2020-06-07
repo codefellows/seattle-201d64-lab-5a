@@ -117,7 +117,7 @@ Test this function by hand in the console to get it working, and when you think 
 function multiplyArray(multArr) { //eslint-disable-line
 var productFirstTwo = multiply(multArr[0], multArr[1]);
 var productTotal = multiply(productFirstTwo[0], multArr[2]);
-var productArrayWords = 'The numbers ' + multArr[0] + ',' + multArr[1] + ',' + multArr[2] + ' have a product of ' + productTotal[0] + '.';
+var productArrayWords = 'The numbers ' + multArr + ' have a product of ' + productTotal[0] + '.';
 var productArrayOutput = [productTotal[0], productArrayWords];
 console.log('productArrayOutput', productArrayOutput);
 return productArrayOutput;
@@ -161,6 +161,6 @@ return multiplyAnyArrayOutput;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-testMultiplyAnyArray(testDynamicArray);
+// testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
