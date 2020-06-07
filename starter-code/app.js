@@ -83,9 +83,9 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-var testArray = [2, 3, 4]; //eslint-disable-line
+var testArray = [2,3,4]; //eslint-disable-line
 
-function sumArray(testArray) { //eslint-disable-line
+function sumArray() { //eslint-disable-line
 
   var sumArrayGroup1 = sum(testArray[0],testArray[1]);
   var sumArrayGroup2 = sum(sumArrayGroup1[0],testArray[2]);
@@ -114,12 +114,23 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
 
+function multiplyArray() { //eslint-disable-line
+
+  var multArrayGroup1 = multiply(testArray[0],testArray[1]);
+  console.log('group 1 values: '+multArrayGroup1);
+
+  var multArrayGroup2 = multiply(multArrayGroup1[0],testArray[2]);
+  console.log('group 2 values: '+multArrayGroup2);
+
+  var multArrayMaster = [(multArrayGroup2[0]),('The numbers '+testArray+' have a product of '+multArrayGroup2[0]+'.')];
+
+  console.log('mult array master value: ' +multArrayMaster);
+  return multArrayMaster;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
