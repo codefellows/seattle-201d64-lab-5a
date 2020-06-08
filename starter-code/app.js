@@ -9,7 +9,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-
+console.log(a, b);
+var addNum = a + b;
+var sentence = 'The sum of ' + a + ' and ' + b + ' is ' + addNum + '.';
+var output = [addNum, sentence];
+console.log('output', output);
+return output;
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -27,7 +32,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+console.log(a,b);
+var multiplyNums = a * b;
+var words = 'The product of ' + a + ' and ' + b + ' is ' + multiplyNums + '.';
+var outputProduct = [multiplyNums, words];
+console.log('outputProduct', outputProduct);
+return outputProduct; 
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -48,7 +58,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+console.log(a,b,c);
+var addFirstTwo = sum(a,b);
+var finalSum = sum(addFirstTwo[0], c);
+var multiplyFirstTwo = multiply(a,b);
+var finalProduct = multiply(multiplyFirstTwo[0], c);
+var sumWords = a + ' and ' + b + ' and ' + c + ' sum to ' + finalSum[0] + '.';
+var productWords = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + finalProduct[0] + '.';
+var sumAndMultiplyOutput = [finalSum[0], finalProduct[0], sumWords, productWords];
+console.log('sumAndMultiplyOutput', sumAndMultiplyOutput);
+return sumAndMultiplyOutput;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -70,7 +89,12 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+var sumFirstTwo = sum(sumArr[0], sumArr[1]);
+var sumTotal = sum(sumFirstTwo[0], sumArr[2]);
+var sumArrayWords = sumArr[0] + ',' + sumArr[1] + ',' + sumArr[2] + ' was passed in as an array of numbers, and ' + sumTotal[0] + ' is their sum.';
+var sumArrayOutput = [sumTotal[0], sumArrayWords];
+console.log('sumArrayOutput:', sumArrayOutput);
+return sumArrayOutput;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -91,7 +115,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+var productFirstTwo = multiply(multArr[0], multArr[1]);
+var productTotal = multiply(productFirstTwo[0], multArr[2]);
+var productArrayWords = 'The numbers ' + multArr + ' have a product of ' + productTotal[0] + '.';
+var productArrayOutput = [productTotal[0], productArrayWords];
+console.log('productArrayOutput', productArrayOutput);
+return productArrayOutput;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
@@ -119,7 +148,16 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+var product = 1;
+for (var i = 0; i < dynamicArray.length; i++){
+  product = multiply(product, dynamicArray[i]);
+  product = product[0];  
+}
 
+var multiplyAnyArrayWords = 'The numbers ' + dynamicArray + ' have a product of ' + product + '.';
+var multiplyAnyArrayOutput = [product, multiplyAnyArrayWords];
+console.log('multiplyAnyArrayOutput', multiplyAnyArrayOutput);
+return multiplyAnyArrayOutput;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
