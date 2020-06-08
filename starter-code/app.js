@@ -12,7 +12,7 @@ function sum(a, b) { //eslint-disable-line
   let answer = a+b;
   let words = "The sum of " + a + " and " + b + " is " + answer +".";
   let result = [answer, words];
-  return answer;
+  return result;
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -33,7 +33,7 @@ function multiply(a, b) { //eslint-disable-line
   let answer = a*b;
   let words = "The product of " + a + " and " + b + " is " + answer +".";
   let result = [answer, words];
-  return answer;
+  return result;
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -54,8 +54,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  let sumAnswer = sum (sum(a, b), c);
-  let prodAnswer = multiply(multiply(a, b),c);
+  let sumAnswer = sum (sum(a, b)[0], c)[0];
+  let prodAnswer = multiply(multiply(a, b)[0],c)[0];
   let sumWords = a + " and " + b + " and " + c + " sum to " + sumAnswer +".";
   let prodWords = "The product of " + a + " and " + b + " and " + c + " is " + prodAnswer + ".";
   let result = [sumAnswer, prodAnswer, sumWords, prodWords];
@@ -86,11 +86,11 @@ function sumArray(sumArr) { //eslint-disable-line
   let val = "";
   for(let i in sumArr){
     if(i < sumArr.length-1){
-      val = sum(sum( val, sumArr[i]), ",");
+      val = sum(sum( val, sumArr[i])[0], ",")[0];
     }else{
-      val = sum(val, sumArr[i]);
+      val = sum(val, sumArr[i])[0];
     }
-    sumOfArray = sum(sumOfArray, sumArr[i]);
+    sumOfArray = sum(sumOfArray, sumArr[i])[0];
   }
   let words = val + " was passed in as an array of numbers, and " + sumOfArray + " is their sum.";
   let result = [sumOfArray, words]
@@ -119,11 +119,11 @@ function multiplyArray(multArr) { //eslint-disable-line
   let val = "";
   for(let i in multArr){
     if(i < multArr.length-1){
-      val = sum(sum(val, multArr[i]), ",");
+      val = sum(sum(val, multArr[i])[0], ",")[0];
     }else{
-      val = sum(val, multArr[i]);
+      val = sum(val, multArr[i])[0];
     }
-    prodOfArray = multiply(prodOfArray, multArr[i]);
+    prodOfArray = multiply(prodOfArray, multArr[i])[0];
   }
   let words = "The numbers " + val + " have a product of " + prodOfArray + ".";
   let result = [prodOfArray, words]
@@ -159,11 +159,11 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
   let val = "";
   for(let i in dynamicArray){
     if(i < dynamicArray.length-1){
-      val = sum(sum(val, dynamicArray[i]), ",");
+      val = sum(sum(val, dynamicArray[i])[0], ",")[0];
     }else{
-      val = sum(val, dynamicArray[i]);
+      val = sum(val, dynamicArray[i])[0];
     }
-    prodOfArray = multiply(prodOfArray, dynamicArray[i]);
+    prodOfArray = multiply(prodOfArray, dynamicArray[i])[0];
   }
   let words = "The numbers " + val + " have a product of " + prodOfArray + ".";
   let result = [prodOfArray, words]
