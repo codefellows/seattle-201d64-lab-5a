@@ -145,7 +145,7 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     dynamicString = dynamicString + ',' + dynamicArray[i];
   }
   console.log(product[0], 'The numbers ' + dynamicString + ' have a product of 120.');
-  return [product[0], 'The numbers ' + dynamicString + ' have a product of 120.'];
+  return [product[0], 'The numbers ' + dynamicString + ' have a product of ' + product[0] + '.'];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
