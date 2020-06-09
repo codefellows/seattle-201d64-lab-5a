@@ -80,7 +80,7 @@ function sumArray(sumArr) { //eslint-disable-line
   var sumResult = sum(sumArr[0], sumArr[1])[0];
   sumResult = sum(sumResult, sumArr[2]);
   console.log('sumResult :', sumResult[0]);
-  // console.log(sumResult[0], sumArr[0] + ',' + sumArr[1] + ',' + sumArr[2] + ' was passed in as an array of numbers, and ' + sumResult + ' is their sumResult.');
+   console.log(sumResult[0], sumArr[0] + ',' + sumArr[1] + ',' + sumArr[2] + ' was passed in as an array of numbers, and ' + sumResult + ' is their sumResult.');
   return [sumResult[0], sumArr[0] + ',' + sumArr[1] + ',' + sumArr[2] + ' was passed in as an array of numbers, and ' + sumResult[0] + ' is their sum.'];
 }
 
